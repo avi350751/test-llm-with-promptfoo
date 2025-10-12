@@ -1,0 +1,27 @@
+# promptfooconfig.yaml
+description: "Variables prompt demo"
+providers:
+  - openai:gpt-4o                                 # OpenAI model ID
+  - anthropic:messages:claude-sonnet-4-20250514   # Claude Sonnet model ID
+  - google:gemini-2.5-flash
+
+prompts:
+  # {{name}}, {{stadium}}, and {{query}} are plain variable placeholders.
+  # Promptfoo swaps them for the values supplied under `vars` in a test case.
+  - |
+    Hello {{name}}, welcome to {{stadium}}!
+    Your request: {{query}}
+
+tests:
+  - vars:
+      name: "Avi"
+      stadium: "Old Trafford"
+      query: "What is the process to avail the stadium tour?"
+  - vars:
+      name: "Jas"
+      stadium: "Target Center"
+      query: "What was the last major event hosted here?"
+  - vars:
+      name: "Sheldon"
+      stadium: "Allianz Arena"
+      query: "What is the address of this stadium?"

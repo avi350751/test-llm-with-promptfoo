@@ -1,0 +1,16 @@
+# promptfooconfig.yaml
+description: "File-based prompt demo"
+providers:
+  - openai:gpt-4o                                 # OpenAI model ID
+  - anthropic:messages:claude-sonnet-4-20250514   # Claude Sonnet model ID
+
+prompts:
+  # Each entry pulls a template from an external text file in ./prompts
+  - file://prompts/doc01.txt
+  - file://prompts/doc02.txt
+
+tests:
+  - vars:
+      query: "What do we mean when we say limit tends to zero?"
+  - vars:
+      query: "How do I reach Google Menlo park office from SFO airport?"

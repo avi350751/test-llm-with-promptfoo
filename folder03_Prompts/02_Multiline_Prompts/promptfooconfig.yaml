@@ -1,0 +1,21 @@
+# promptfooconfig.yaml
+description: "Multiline prompt demo"
+providers:
+  - openai:gpt-4o                                 # OpenAI model ID
+  - anthropic:messages:claude-sonnet-4-20250514   # Claude Sonnet model ID
+  - google:gemini-2.5-flash
+
+prompts:
+  - |
+    You are a helpful assistant.
+
+    Please answer the following question:
+    {{question}}
+
+    Provide a lucid and concise explanation.
+
+tests:
+  - vars:
+      question: "Why leaves are green?"
+  - vars:
+      question : "What is context engineering in AI?"

@@ -1,0 +1,17 @@
+# promptfooconfig.yaml
+description: "Text-prompt demo"
+providers:
+  - openai:gpt-4o                                 # OpenAI model ID
+  - anthropic:messages:claude-sonnet-4-20250514   # Claude Sonnet model ID
+  - google:gemini-2.5-flash
+
+prompts:
+  - 'Translate the following text to Spanish: "{{text}}"'
+  - 'Summarize this article: {{article}}'
+  - 'Create a 20 words article on the {{topic}}'
+
+tests:
+  - vars:
+      text: "Hello, how are you?"
+      article: "Promptfoo is an open-source toolkit for evaluating LLM prompts locally or in CI."
+      topic: "Quantum Computing"
