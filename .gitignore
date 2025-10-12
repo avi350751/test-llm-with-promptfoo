@@ -1,3 +1,1 @@
-folder01 - Deterministic/Contains/.env
-folder01 - Deterministic/Contains-Content/.env
-folder01 - Deterministic/Regex/.env
+*.env
