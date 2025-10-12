@@ -1,0 +1,28 @@
+description: "Compare multiple LLM providers with rubric scoring"
+
+providers:
+  - openai:gpt-4o-mini
+  - anthropic:messages:claude-sonnet-4-20250514
+  - google:gemini-2.5-flash
+
+prompts:
+  - |
+    Summarize the following content clearly and concisely in two sentences:
+    ---
+    {{input}}
+
+tests:
+  - description: "Evaluate summary quality using rubric"
+    vars:
+      input: |
+        The city of Paris is the capital of France, known for its art, cuisine, and history.
+        Millions of tourists visit every year to see landmarks like the Eiffel Tower and Louvre.
+    assert:
+      - type: llm-rubric
+        value: |
+          The answer should:
+          - Be 1–3 sentences long.
+          - Include the main facts (Paris, France, tourism, culture, literature, landmarks).
+          - Stay factual and neutral (no opinions).
+          - Avoid adding new information not in the passage.
+        threshold: 0.8
