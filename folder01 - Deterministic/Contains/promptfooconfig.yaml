@@ -1,0 +1,27 @@
+description: "Deterministic – contains"
+providers:
+  - openai:gpt-4o-mini
+  - anthropic:messages:claude-sonnet-4-20250514
+  - google:gemini-2.5-flash
+
+prompts:
+  - "Greet the user in French."
+
+tests:
+  - assert:
+      - type: contains          # pass if substring present
+        value: "Bonjour"
+
+  - assert:
+      - type: equals
+        value: 'Salut'
+
+  - assert:
+      - type: icontains
+        value: 'bonjour'
+
+  - assert:
+      - type: contains-any
+        value:
+          - 'Bonjour'
+          - 'Salut'

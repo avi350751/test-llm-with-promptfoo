@@ -1,0 +1,21 @@
+description: "Deterministic – JSON Validation by LLM"
+providers:
+  - openai:gpt-4o-mini
+  - anthropic:messages:claude-sonnet-4-20250514
+  - google:gemini-2.5-flash
+
+prompts:
+  - |
+    You are a strict JSON validator.
+    Validate if the following JSON is correct and well-formed.
+    Respond with ONLY "VALID" if correct, or "INVALID: <reason>" if incorrect.
+    
+    JSON to validate:
+    {{jsonContent}}
+
+tests:
+  - vars:
+      jsonContent: file://input.json
+    assert:
+      - type: contains
+        value: "VALID"

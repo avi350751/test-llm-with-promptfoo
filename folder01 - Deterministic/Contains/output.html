@@ -1,0 +1,206 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Deterministic – contains</title>
+    <style>
+      body {
+        font-family:
+          -apple-system,
+          BlinkMacSystemFont,
+          Segoe UI,
+          Roboto,
+          Helvetica,
+          Arial,
+          sans-serif;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        text-align: left;
+        word-break: break-all;
+      }
+      th,
+      td {
+        padding: 5px;
+        min-width: 200px;
+        white-space: pre-line;
+        vertical-align: top;
+      }
+
+      tr > td[data-content^='[PASS]'] {
+        color: green;
+      }
+      tr > td[data-content^='[FAIL]'] {
+        color: #ad0000;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        
+        <th>[openai:gpt-4o-mini] Greet the user in French.</th>
+        
+        <th>[anthropic:claude-sonnet-4-20250514] Greet the user in French.</th>
+        
+        <th>[google:gemini-2.5-flash] Greet the user in French.</th>
+        
+      </thead>
+      <tbody>
+        
+        <tr>
+          
+          <td data-content="[PASS] (1.00)
+
+Bonjour ! Comment puis-je vous aider aujourd&#39;hui ?
+
+Pass Reason: All assertions passed">[PASS] (1.00)
+
+Bonjour ! Comment puis-je vous aider aujourd&#39;hui ?
+
+Pass Reason: All assertions passed</td>
+          
+          <td data-content="[PASS] (1.00)
+
+Bonjour ! Comment allez-vous ?
+
+Pass Reason: All assertions passed">[PASS] (1.00)
+
+Bonjour ! Comment allez-vous ?
+
+Pass Reason: All assertions passed</td>
+          
+          <td data-content="[PASS] (1.00)
+
+Bonjour !
+
+Pass Reason: All assertions passed">[PASS] (1.00)
+
+Bonjour !
+
+Pass Reason: All assertions passed</td>
+          
+        </tr>
+        
+        <tr>
+          
+          <td data-content="[FAIL] (0.00)
+
+Expected output &quot;Bonjour ! Comment puis-je vous aider aujourd&#39;hui ?&quot; to equal &quot;Salut&quot;
+---
+Bonjour ! Comment puis-je vous aider aujourd&#39;hui ?
+
+Fail Reason: Expected output &quot;Bonjour ! Comment puis-je vous aider aujourd&#39;hui ?&quot; to equal &quot;Salut&quot;">[FAIL] (0.00)
+
+Expected output &quot;Bonjour ! Comment puis-je vous aider aujourd&#39;hui ?&quot; to equal &quot;Salut&quot;
+---
+Bonjour ! Comment puis-je vous aider aujourd&#39;hui ?
+
+Fail Reason: Expected output &quot;Bonjour ! Comment puis-je vous aider aujourd&#39;hui ?&quot; to equal &quot;Salut&quot;</td>
+          
+          <td data-content="[FAIL] (0.00)
+
+Expected output &quot;Bonjour ! Comment allez-vous ?&quot; to equal &quot;Salut&quot;
+---
+Bonjour ! Comment allez-vous ?
+
+Fail Reason: Expected output &quot;Bonjour ! Comment allez-vous ?&quot; to equal &quot;Salut&quot;">[FAIL] (0.00)
+
+Expected output &quot;Bonjour ! Comment allez-vous ?&quot; to equal &quot;Salut&quot;
+---
+Bonjour ! Comment allez-vous ?
+
+Fail Reason: Expected output &quot;Bonjour ! Comment allez-vous ?&quot; to equal &quot;Salut&quot;</td>
+          
+          <td data-content="[FAIL] (0.00)
+
+Expected output &quot;Bonjour !&quot; to equal &quot;Salut&quot;
+---
+Bonjour !
+
+Fail Reason: Expected output &quot;Bonjour !&quot; to equal &quot;Salut&quot;">[FAIL] (0.00)
+
+Expected output &quot;Bonjour !&quot; to equal &quot;Salut&quot;
+---
+Bonjour !
+
+Fail Reason: Expected output &quot;Bonjour !&quot; to equal &quot;Salut&quot;</td>
+          
+        </tr>
+        
+        <tr>
+          
+          <td data-content="[PASS] (1.00)
+
+Bonjour ! Comment puis-je vous aider aujourd&#39;hui ?
+
+Pass Reason: All assertions passed">[PASS] (1.00)
+
+Bonjour ! Comment puis-je vous aider aujourd&#39;hui ?
+
+Pass Reason: All assertions passed</td>
+          
+          <td data-content="[PASS] (1.00)
+
+Bonjour ! Comment allez-vous ?
+
+Pass Reason: All assertions passed">[PASS] (1.00)
+
+Bonjour ! Comment allez-vous ?
+
+Pass Reason: All assertions passed</td>
+          
+          <td data-content="[PASS] (1.00)
+
+Bonjour !
+
+Pass Reason: All assertions passed">[PASS] (1.00)
+
+Bonjour !
+
+Pass Reason: All assertions passed</td>
+          
+        </tr>
+        
+        <tr>
+          
+          <td data-content="[PASS] (1.00)
+
+Bonjour ! Comment puis-je vous aider aujourd&#39;hui ?
+
+Pass Reason: All assertions passed">[PASS] (1.00)
+
+Bonjour ! Comment puis-je vous aider aujourd&#39;hui ?
+
+Pass Reason: All assertions passed</td>
+          
+          <td data-content="[PASS] (1.00)
+
+Bonjour ! Comment allez-vous ?
+
+Pass Reason: All assertions passed">[PASS] (1.00)
+
+Bonjour ! Comment allez-vous ?
+
+Pass Reason: All assertions passed</td>
+          
+          <td data-content="[PASS] (1.00)
+
+Bonjour !
+
+Pass Reason: All assertions passed">[PASS] (1.00)
+
+Bonjour !
+
+Pass Reason: All assertions passed</td>
+          
+        </tr>
+        
+      </tbody>
+    </table>
+  </body>
+</html>

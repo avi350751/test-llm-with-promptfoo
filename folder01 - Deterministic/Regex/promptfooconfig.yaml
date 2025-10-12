@@ -1,0 +1,16 @@
+description: "Deterministic – regex"
+providers:
+  - openai:gpt-4o-mini
+  - anthropic:messages:claude-sonnet-4-20250514
+  - google:gemini-2.5-flash
+
+prompts:
+  - "Mention only the year when Bob Dylan won the Nobel Prize?"
+
+tests:
+  - assert:
+      - type: regex             # must match 2016 exactly
+        value: "^2016$"
+  - assert:
+      - type: regex
+        value: "\\d{4}"

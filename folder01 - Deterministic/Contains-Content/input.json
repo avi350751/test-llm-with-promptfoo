@@ -1,0 +1,24 @@
+{
+  "name": "Avishek Bhattacharjee",
+  "role": "AI Tester",
+  "skills": [
+    "Promptfoo",
+    "LangChain",
+    "OpenAI API",
+    "Automation Testing"
+  ],
+  "experience_years": 8,
+  "certified": true,
+  "projects": [
+    {
+      "name": "LLM Evaluation Framework",
+      "tool": "Promptfoo",
+      "status": "Completed"
+    },
+    {
+      "name": "Agentic AI Validator",
+      "tool": "LangChain",
+      "status": "In Progress"
+    }
+  ]
+}
