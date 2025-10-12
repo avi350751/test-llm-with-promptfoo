@@ -1,0 +1,15 @@
+description: "Evaluate answer relevance"
+
+providers:
+  - openai:gpt-4o-mini
+
+prompts:
+  - "What is Promptfoo used for?"
+
+tests:
+  - vars:
+      expected: "Promptfoo is used to test and compare LLM prompt outputs for accuracy and consistency."
+    assert:
+      - type: answer-relevance
+        value: "{{ expected }}"
+        threshold: 0.75
