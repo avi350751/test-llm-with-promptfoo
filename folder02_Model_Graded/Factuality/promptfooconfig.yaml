@@ -1,0 +1,21 @@
+description: "Evaluate answer relevance"
+
+providers:
+  - openai:gpt-4o-mini
+  - anthropic:messages:claude-sonnet-4-20250514
+  - google:gemini-2.5-flash
+
+prompts:
+  - "What is the captital of {{place}}?"
+
+tests:
+  - vars:
+      place: "Colombia"
+    assert:
+      - type: factuality
+        value: "Bogota is the capital of Colombia"
+  - vars:
+      place: "Sydney"
+    assert:
+      - type: factuality
+        value: "Canberra is the capital of Sydney"
