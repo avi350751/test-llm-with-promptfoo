@@ -1,0 +1,31 @@
+# promptfooconfig.yaml
+description: "Story-based prompt demo"
+providers:
+  - openai:gpt-4o                                 # OpenAI model ID
+  - anthropic:messages:claude-sonnet-4-20250514   # Claude Sonnet model ID
+
+prompts:
+  - |-
+    Write a story in 50 words where user can select a {{character}}, 
+    pick a {{magical_item}}, select a {{place}} for adventure, solving a {{problem}}
+    with a {{moral}} ending.
+    The story is for kids with age ranging 5-10 years.
+    Keep the story lucid, engaging and playful.
+    Do not add anywords or intent which is not age appropriate.
+
+tests:
+    vars:
+      character: "Emma"
+      magical_item: "Genie's lamp"
+      place: "Pirate ship"
+      problem: "Finding a lost treasure"
+      moral: "Learning a valuable lesson"
+    assert:
+      type: contains
+      value: "Emma"
+      type: contains
+      value: "Genie's lamp"
+      type: contains
+      value: "Pirate ship"
+      type: contains
+      value: "Finding a lost treasure"

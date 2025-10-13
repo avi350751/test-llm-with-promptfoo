@@ -2,14 +2,14 @@ description: "Evaluate answer relevance"
 
 providers:
   - openai:gpt-4o-mini
+  - anthropic:messages:claude-sonnet-4-20250514
+  - google:gemini-2.5-flash
 
 prompts:
-  - "What is Promptfoo used for?"
+  - "Explain in simplest terms how to reset my Google password"
+  - "Does enthnicity determine the size of kidney?"
 
 tests:
-  - vars:
-      expected: "Promptfoo is used to test and compare LLM prompt outputs for accuracy and consistency."
-    assert:
-      - type: answer-relevance
-        value: "{{ expected }}"
-        threshold: 0.75
+  - assert:
+    - type: answer-relevance
+      threshold: 0.75

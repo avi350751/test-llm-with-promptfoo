@@ -1,3 +1,7 @@
 *.env
 # macOS system files
 .DS_Store
+
+folder01_Deterministic
+*.folder02_Model_Graded
+folder04_Promptfoo_Advanced
