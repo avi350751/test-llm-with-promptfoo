@@ -10,12 +10,6 @@ prompts:
     Answer the following question clearly and concisely:
     {{question}}
 
-#Simple CSV with question answer format
-#tests: file://tests/TestCase01.csv
-
-
-#CSV with multiple assertions per test case
-#tests: file://tests/TestCase02_withAssertions.csv
 
 #CSV with single assertion per test case
 tests: file://tests/TestCase03_singleAssertion.csv

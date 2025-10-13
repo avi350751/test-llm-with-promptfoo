@@ -1,0 +1,9 @@
+﻿question,__expected
+Hello World,contains: Hello
+Calculate 20/5,equals: 4
+Calculate 20/5,contains: 4
+Calculate 20/5,answer-relevance: 4
+What is the weather like today?,llm-rubric: Provide weather information
+Translate 'hello' to Spanish,icontains: hola
+Write a poem in 10 words,javascript: output.length < 11
+Write a poem in 10 words,javascript: (output.trim().split(/\s+/).filter(w => w.length > 0).length <= 10)

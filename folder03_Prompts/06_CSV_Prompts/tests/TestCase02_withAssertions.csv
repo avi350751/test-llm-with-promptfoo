@@ -1,0 +1,4 @@
+﻿question,__expected1,__expected2,__expected3
+What is 2+2?,equals:4,contains: four,javascript: output.length < 10
+What is the capital of India?,icontains:new delhi,contains: New Delhi,llm-rubric: Answer as per the question with any addition of sentences
+Name three primary colors,"contains-all:red,blue,yellow",javascript: output.length > 10,llm-rubric: mention three primary colors
