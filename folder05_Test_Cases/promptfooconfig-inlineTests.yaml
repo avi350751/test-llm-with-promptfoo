@@ -1,0 +1,24 @@
+# promptfooconfig.yaml
+description: "Inline Tests demo"
+providers:
+  - openai:gpt-4o                                 # OpenAI model ID
+  - anthropic:messages:claude-sonnet-4-20250514   # Claude Sonnet model ID
+
+prompts:
+  - |
+    You're a helpful assistant.
+    Answer the following question clearly and concisely:
+    {{question}}
+
+tests:
+  - vars:
+      question : "What is the capital of India?"
+      assert:
+        - type: contains
+          value: "New Delhi"
+
+  - vars:
+      question : "What is 2+2?"
+      assert:
+        - type: equals
+          value: "4"

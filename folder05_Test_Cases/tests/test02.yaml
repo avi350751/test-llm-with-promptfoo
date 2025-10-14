@@ -1,0 +1,28 @@
+# test02.yaml
+
+# 1) French greeting: keyword + tone rubric
+- description: "French greeting is friendly and correct"
+  vars:
+    question: "Greet the user in French."
+  assert:
+    - type: contains
+      value: "Bonjour"
+      weight: 2
+    - type: llm-rubric
+      value: |
+        The answer should:
+        - Be in French.
+        - Use a friendly tone.
+        - Be brief (≤ 20 words).
+      threshold: 0.8
+
+# 2) Simple arithmetic: allow natural phrasing but require the right number
+- description: "20/5 result present"
+  vars:
+    question: "Calculate 20/5."
+  assert:
+    - type: icontains
+      value: "4"
+    - type: equals
+      value: |
+        20 divided by 5 equals to 4

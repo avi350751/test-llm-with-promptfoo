@@ -1,0 +1,29 @@
+#test04
+
+# 5) Pattern matching
+- description: "Enforce format and correctness"
+  vars:
+      question: "Say the color of the sky in one sentence."
+  assert:
+      - type: starts-with
+        value: "The"
+        weight: 1
+      - type: icontains
+        value: "blue"
+        weight: 2
+      - type: llm-rubric
+        value: |
+          The answer should:
+          - Start with 'The'.
+          - Mention that the sky is blue.
+          - no addition of sentences.
+        threshold: 0.8
+
+# 6) Validate JSON shape strictly with schema
+- description: "Test semantic similarity"
+  vars:
+    question: "What is the capital of France?"
+  assert:
+    - type: similar
+      value: "The capital of France is Paris."
+      threshold: 0.9

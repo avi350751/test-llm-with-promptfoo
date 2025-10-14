@@ -1,0 +1,21 @@
+
+  - vars:
+      question: 'What is the capital of France?'
+    assert:
+      - type: contains
+        value: 'Paris'
+
+  - vars:
+      question: 'What is 2 + 2?'
+    assert:
+      - type: contains
+        value: "4"
+
+  - vars:
+      question: "Name the last 3 presidents of the United States in order"
+      assert:
+        - type: icontains
+          value: |
+                    Donald Trump
+                    Joe Biden
+                    Barack Obama

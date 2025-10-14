@@ -1,0 +1,20 @@
+#test03
+
+# 3) Translation to Spanish: substring + rubric in Spanish
+- description: "Translate 'hello' to Spanish"
+  vars:
+    question: "Translate 'hello' to Spanish."
+  assert:
+    - type: icontains
+      value: "hola"
+
+# 4) Answer relevance vs reference
+- description: "Short definition with semantic match"
+  vars:
+    question: "Define overfitting in one sentence."
+    expectedAnswer: "Overfitting is when a model learns patterns specific to training data and fails to generalize to new data."
+  assert:
+    - type: answer-relevance
+      value: "{{expectedAnswer}}"
+      threshold: 0.5
+      weight: 2
