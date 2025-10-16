@@ -1,0 +1,14 @@
+# promptfooconfig.yaml
+description: "Test Cases CSV with Metadata demo"
+providers:
+  - openai:gpt-4o                                 # OpenAI model ID
+  - anthropic:messages:claude-sonnet-4-20250514   # Claude Sonnet model ID
+
+prompts:
+  - |
+    You're a helpful assistant.
+    Answer the following question clearly and concisely:
+    {{question}}
+
+tests: 
+  - file://tests/TestCase04_Metadata.csv

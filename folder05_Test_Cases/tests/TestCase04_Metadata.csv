@@ -1,0 +1,6 @@
+﻿question,__expectedAnswer,__metadata:category,__metadata:difficulty,__metadata:tags
+What is the capital of Bolivia?,equals: Sucre,country,medium,geo
+What is cloud computing,llm-rubric: Accurate explanation,IT,hard,ai
+Name the current prime minister of India,contains: Narendra Modi,politics,easy,pol
+What is the financial capital of India,starts-with: Mumbai,current affairs,easy,geo
+What is 2+.08?,contains: 2.08,math,medium,ai
