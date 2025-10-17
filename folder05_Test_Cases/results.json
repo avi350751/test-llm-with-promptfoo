@@ -1,0 +1,608 @@
+{
+  "evalId": "eval-Om0-2025-10-16T22:55:42",
+  "results": {
+    "version": 3,
+    "timestamp": "2025-10-16T22:55:42.189Z",
+    "prompts": [
+      {
+        "raw": "You're a helpful assistant.\nAnswer the following question clearly and concisely:\n{{question}}\n",
+        "label": "You're a helpful assistant.\nAnswer the following question clearly and concisely:\n{{question}}\n",
+        "id": "b9aec7ad75e35f763ea292f35e56c7ef59ab34510c3307306c44ffe019393c62",
+        "provider": "openai:gpt-4o",
+        "metrics": {
+          "score": 3,
+          "testPassCount": 3,
+          "testFailCount": 0,
+          "testErrorCount": 0,
+          "assertPassCount": 0,
+          "assertFailCount": 0,
+          "totalLatencyMs": 3595,
+          "tokenUsage": {
+            "prompt": 27,
+            "completion": 28,
+            "cached": 74,
+            "total": 129,
+            "numRequests": 3,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0
+            },
+            "assertions": {
+              "total": 0,
+              "prompt": 0,
+              "completion": 0,
+              "cached": 0,
+              "numRequests": 0,
+              "completionDetails": {
+                "reasoning": 0,
+                "acceptedPrediction": 0,
+                "rejectedPrediction": 0
+              }
+            }
+          },
+          "namedScores": {},
+          "namedScoresCount": {},
+          "cost": 0.0006525000000000001
+        }
+      },
+      {
+        "raw": "You're a helpful assistant.\nAnswer the following question clearly and concisely:\n{{question}}\n",
+        "label": "You're a helpful assistant.\nAnswer the following question clearly and concisely:\n{{question}}\n",
+        "id": "b9aec7ad75e35f763ea292f35e56c7ef59ab34510c3307306c44ffe019393c62",
+        "provider": "anthropic:claude-sonnet-4-20250514",
+        "metrics": {
+          "score": 3,
+          "testPassCount": 3,
+          "testFailCount": 0,
+          "testErrorCount": 0,
+          "assertPassCount": 0,
+          "assertFailCount": 0,
+          "totalLatencyMs": 7119,
+          "tokenUsage": {
+            "prompt": 93,
+            "completion": 72,
+            "cached": 0,
+            "total": 165,
+            "numRequests": 3,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0
+            },
+            "assertions": {
+              "total": 0,
+              "prompt": 0,
+              "completion": 0,
+              "cached": 0,
+              "numRequests": 0,
+              "completionDetails": {
+                "reasoning": 0,
+                "acceptedPrediction": 0,
+                "rejectedPrediction": 0
+              }
+            }
+          },
+          "namedScores": {},
+          "namedScoresCount": {},
+          "cost": 0.001359
+        }
+      }
+    ],
+    "results": [
+      {
+        "cost": 0.00015250000000000002,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "No assertions",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "assertion": null
+        },
+        "id": "d3dc7abb-393a-43f7-a04e-3ba9a17e78a7",
+        "latencyMs": 7,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You're a helpful assistant.\nAnswer the following question clearly and concisely:\nWhat is the capital of India?\n",
+          "label": "You're a helpful assistant.\nAnswer the following question clearly and concisely:\n{{question}}\n"
+        },
+        "promptId": "b9aec7ad75e35f763ea292f35e56c7ef59ab34510c3307306c44ffe019393c62",
+        "promptIdx": 0,
+        "provider": {
+          "id": "openai:gpt-4o",
+          "label": ""
+        },
+        "response": {
+          "output": "The capital of India is New Delhi.",
+          "tokenUsage": {
+            "cached": 37,
+            "total": 37
+          },
+          "cached": true,
+          "finishReason": "stop",
+          "cost": 0.00015250000000000002
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "question": "What is the capital of India?",
+            "assert": [
+              {
+                "type": "contains",
+                "value": "New Delhi"
+              }
+            ]
+          },
+          "assert": [],
+          "options": {},
+          "metadata": {}
+        },
+        "testIdx": 0,
+        "vars": {
+          "question": "What is the capital of India?",
+          "assert": [
+            {
+              "type": "contains",
+              "value": "New Delhi"
+            }
+          ]
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0.000261,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "No assertions",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "assertion": null
+        },
+        "id": "566c8994-f109-4ea3-a76e-9b3ca436b20f",
+        "latencyMs": 1847,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You're a helpful assistant.\nAnswer the following question clearly and concisely:\nWhat is the capital of India?\n",
+          "label": "You're a helpful assistant.\nAnswer the following question clearly and concisely:\n{{question}}\n"
+        },
+        "promptId": "b9aec7ad75e35f763ea292f35e56c7ef59ab34510c3307306c44ffe019393c62",
+        "promptIdx": 1,
+        "provider": {
+          "id": "anthropic:claude-sonnet-4-20250514",
+          "label": ""
+        },
+        "response": {
+          "output": "The capital of India is New Delhi.",
+          "tokenUsage": {
+            "total": 43,
+            "prompt": 32,
+            "completion": 11
+          },
+          "finishReason": "stop",
+          "cost": 0.000261
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "question": "What is the capital of India?",
+            "assert": [
+              {
+                "type": "contains",
+                "value": "New Delhi"
+              }
+            ]
+          },
+          "assert": [],
+          "options": {},
+          "metadata": {}
+        },
+        "testIdx": 0,
+        "vars": {
+          "question": "What is the capital of India?",
+          "assert": [
+            {
+              "type": "contains",
+              "value": "New Delhi"
+            }
+          ]
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0.00015250000000000002,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "No assertions",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "assertion": null
+        },
+        "id": "6e17723c-11b2-4fea-bb34-19420f0d35bf",
+        "latencyMs": 10,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You're a helpful assistant.\nAnswer the following question clearly and concisely:\nWhat is 2+2?\n",
+          "label": "You're a helpful assistant.\nAnswer the following question clearly and concisely:\n{{question}}\n"
+        },
+        "promptId": "b9aec7ad75e35f763ea292f35e56c7ef59ab34510c3307306c44ffe019393c62",
+        "promptIdx": 0,
+        "provider": {
+          "id": "openai:gpt-4o",
+          "label": ""
+        },
+        "response": {
+          "output": "2 + 2 equals 4.",
+          "tokenUsage": {
+            "cached": 37,
+            "total": 37
+          },
+          "cached": true,
+          "finishReason": "stop",
+          "cost": 0.00015250000000000002
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "question": "What is 2+2?",
+            "assert": [
+              {
+                "type": "equals",
+                "value": "4"
+              }
+            ]
+          },
+          "assert": [],
+          "options": {},
+          "metadata": {}
+        },
+        "testIdx": 1,
+        "vars": {
+          "question": "What is 2+2?",
+          "assert": [
+            {
+              "type": "equals",
+              "value": "4"
+            }
+          ]
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0.000291,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "No assertions",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "assertion": null
+        },
+        "id": "29c91183-a0ea-4a3e-8698-83203422ade6",
+        "latencyMs": 2270,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You're a helpful assistant.\nAnswer the following question clearly and concisely:\nWhat is 2+2?\n",
+          "label": "You're a helpful assistant.\nAnswer the following question clearly and concisely:\n{{question}}\n"
+        },
+        "promptId": "b9aec7ad75e35f763ea292f35e56c7ef59ab34510c3307306c44ffe019393c62",
+        "promptIdx": 1,
+        "provider": {
+          "id": "anthropic:claude-sonnet-4-20250514",
+          "label": ""
+        },
+        "response": {
+          "output": "2 + 2 = 4",
+          "tokenUsage": {
+            "total": 45,
+            "prompt": 32,
+            "completion": 13
+          },
+          "finishReason": "stop",
+          "cost": 0.000291
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "question": "What is 2+2?",
+            "assert": [
+              {
+                "type": "equals",
+                "value": "4"
+              }
+            ]
+          },
+          "assert": [],
+          "options": {},
+          "metadata": {}
+        },
+        "testIdx": 1,
+        "vars": {
+          "question": "What is 2+2?",
+          "assert": [
+            {
+              "type": "equals",
+              "value": "4"
+            }
+          ]
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0.000807,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "No assertions",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "assertion": null
+        },
+        "id": "d816ee8a-3193-45e5-a95f-99bc61513164",
+        "latencyMs": 3002,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You're a helpful assistant.\nAnswer the following question clearly and concisely:\nName the primary colors\n",
+          "label": "You're a helpful assistant.\nAnswer the following question clearly and concisely:\n{{question}}\n"
+        },
+        "promptId": "b9aec7ad75e35f763ea292f35e56c7ef59ab34510c3307306c44ffe019393c62",
+        "promptIdx": 1,
+        "provider": {
+          "id": "anthropic:claude-sonnet-4-20250514",
+          "label": ""
+        },
+        "response": {
+          "output": "The primary colors are:\n\n**Red, Blue, and Yellow**\n\nThese are considered the fundamental colors that cannot be created by mixing other colors together, and they serve as the basis for creating all other colors through combination.",
+          "tokenUsage": {
+            "total": 77,
+            "prompt": 29,
+            "completion": 48
+          },
+          "finishReason": "stop",
+          "cost": 0.000807
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "question": "Name the primary colors",
+            "assert": [
+              {
+                "type": "llm-rubric",
+                "value": "Answer in relevance."
+              }
+            ]
+          },
+          "assert": [],
+          "options": {},
+          "metadata": {}
+        },
+        "testIdx": 2,
+        "vars": {
+          "question": "Name the primary colors",
+          "assert": [
+            {
+              "type": "llm-rubric",
+              "value": "Answer in relevance."
+            }
+          ]
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0.00034750000000000004,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "No assertions",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "assertion": null
+        },
+        "id": "10c9460f-18f9-472a-b92c-fa3e9307876a",
+        "latencyMs": 3578,
+        "namedScores": {},
+        "prompt": {
+          "raw": "You're a helpful assistant.\nAnswer the following question clearly and concisely:\nName the primary colors\n",
+          "label": "You're a helpful assistant.\nAnswer the following question clearly and concisely:\n{{question}}\n"
+        },
+        "promptId": "b9aec7ad75e35f763ea292f35e56c7ef59ab34510c3307306c44ffe019393c62",
+        "promptIdx": 0,
+        "provider": {
+          "id": "openai:gpt-4o",
+          "label": ""
+        },
+        "response": {
+          "output": "The primary colors are red, blue, and yellow. These colors can be combined in various ways to create a wide range of other colors.",
+          "tokenUsage": {
+            "total": 55,
+            "prompt": 27,
+            "completion": 28,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0
+            }
+          },
+          "cached": false,
+          "finishReason": "stop",
+          "cost": 0.00034750000000000004
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "question": "Name the primary colors",
+            "assert": [
+              {
+                "type": "llm-rubric",
+                "value": "Answer in relevance."
+              }
+            ]
+          },
+          "assert": [],
+          "options": {},
+          "metadata": {}
+        },
+        "testIdx": 2,
+        "vars": {
+          "question": "Name the primary colors",
+          "assert": [
+            {
+              "type": "llm-rubric",
+              "value": "Answer in relevance."
+            }
+          ]
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      }
+    ],
+    "stats": {
+      "successes": 6,
+      "failures": 0,
+      "errors": 0,
+      "tokenUsage": {
+        "prompt": 120,
+        "completion": 100,
+        "cached": 74,
+        "total": 294,
+        "numRequests": 6,
+        "completionDetails": {
+          "reasoning": 0,
+          "acceptedPrediction": 0,
+          "rejectedPrediction": 0
+        },
+        "assertions": {
+          "total": 0,
+          "prompt": 0,
+          "completion": 0,
+          "cached": 0,
+          "numRequests": 0,
+          "completionDetails": {
+            "reasoning": 0,
+            "acceptedPrediction": 0,
+            "rejectedPrediction": 0
+          }
+        }
+      }
+    }
+  },
+  "config": {
+    "tags": {},
+    "description": "Inline Tests demo",
+    "prompts": [
+      "You're a helpful assistant.\nAnswer the following question clearly and concisely:\n{{question}}\n"
+    ],
+    "providers": [
+      "openai:gpt-4o",
+      "anthropic:messages:claude-sonnet-4-20250514"
+    ],
+    "tests": [
+      {
+        "vars": {
+          "question": "What is the capital of India?",
+          "assert": [
+            {
+              "type": "contains",
+              "value": "New Delhi"
+            }
+          ]
+        }
+      },
+      {
+        "vars": {
+          "question": "What is 2+2?",
+          "assert": [
+            {
+              "type": "equals",
+              "value": "4"
+            }
+          ]
+        }
+      },
+      {
+        "vars": {
+          "question": "Name the primary colors",
+          "assert": [
+            {
+              "type": "llm-rubric",
+              "value": "Answer in relevance."
+            }
+          ]
+        }
+      }
+    ],
+    "scenarios": [],
+    "env": {},
+    "sharing": false,
+    "outputPath": [
+      "results.json"
+    ],
+    "extensions": [],
+    "metadata": {},
+    "evaluateOptions": {}
+  },
+  "shareableUrl": null,
+  "metadata": {
+    "promptfooVersion": "0.118.11",
+    "nodeVersion": "v24.9.0",
+    "platform": "darwin",
+    "arch": "arm64",
+    "exportedAt": "2025-10-16T22:55:45.829Z",
+    "evaluationCreatedAt": "2025-10-16T22:55:42.189Z"
+  }
+}

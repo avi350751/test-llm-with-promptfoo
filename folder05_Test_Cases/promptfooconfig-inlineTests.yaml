@@ -22,3 +22,9 @@ tests:
       assert:
         - type: equals
           value: "4"
+
+  - vars:
+      question : "Name the primary colors"
+      assert:
+        - type: llm-rubric
+          value: Answer in relevance.
