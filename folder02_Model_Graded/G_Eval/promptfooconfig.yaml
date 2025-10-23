@@ -49,3 +49,15 @@ tests:
           - "Include an example and explain the concept "
           - "If you are not do not hallucinate."
         threshold: 0.65
+  - description: "Evaluate response based on the answer quality."
+    vars:
+      input: |
+        "Explain osmosis to a 3rd grader"
+    assert:
+      - type: g-eval
+        value: 
+          - "Be factually correct"
+          - "Answer in maximum 1-2 sentences"
+          - "Include an example and explain the concept "
+          - "If you are not do not hallucinate."
+        threshold: 0.60
