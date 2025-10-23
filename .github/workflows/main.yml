@@ -1,0 +1,39 @@
+name: Promptfoo Evaluation
+
+on:
+  push:
+    branches: [ main, develop ]
+    paths:
+      - '/Project1/folder02_Model_Graded/G_Eval'  # Only trigger when files in this folder change
+  pull_request:
+    branches: [ main ]
+    paths:
+      - '/Project1/folder02_Model_Graded/G_Eval'
+
+jobs:
+  evaluate:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        
+    - name: Install promptfoo
+      run: npm install -g promptfoo
+      
+    - name: Run promptfoo evaluation
+      working-directory: ./Project1/folder02_Model_Graded/G_Eval  # Navigate to your folder
+      env:
+        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      run: promptfoo eval --no-cache
+      
+    - name: Upload results
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: promptfoo-results
+        path: ./Project1/folder02_Model_Graded/G_Eval/  # Adjust output path
