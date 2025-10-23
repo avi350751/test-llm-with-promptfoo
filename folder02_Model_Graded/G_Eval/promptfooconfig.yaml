@@ -1,0 +1,39 @@
+description: |
+          G-Eval is a framework that uses LLMs with chain-of-thoughts (CoT) 
+          to evaluate LLM outputs based on custom criteria.
+
+providers:
+  - openai:gpt-4o-mini
+
+prompts:
+  - |
+      You are a smart assistant.
+      Answer the user's request in 3-5 sentences, include a concrete example, and avoid fluff.
+      Request:
+      {{input}}
+
+tests:
+  - description: "Evaluate response based on G-Eval criteria."
+    vars:
+      input: |
+        "What is the capital of France?"
+    assert:
+      - type: g-eval
+        value: 
+          - "Be factually correct"
+          - "Be clear and concise (3–5 sentences)"
+          - "Include a concrete example if applicable"
+          - "Follow instructions; avoid fluff"
+        threshold: 0.7
+  - description: "Evaluate response on quantum computing."
+    vars:
+      input: |
+        "Explain the concept of quantum computing."
+    assert:
+      - type: g-eval
+        value: 
+          - "Be factually correct"
+          - "Answer in minimum 2 sentences"
+          - "Include an example "
+          - "Follow instructions; do not hallucinate"
+        threshold: 0.65
