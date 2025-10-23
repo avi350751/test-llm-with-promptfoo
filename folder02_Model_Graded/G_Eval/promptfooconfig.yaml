@@ -37,3 +37,15 @@ tests:
           - "Include an example "
           - "Follow instructions; do not hallucinate"
         threshold: 0.65
+  - description: "Evaluate response based on the response quality."
+    vars:
+      input: |
+        "What is reverse swing in cricket?"
+    assert:
+      - type: g-eval
+        value: 
+          - "Be factually correct"
+          - "Answer in maximum 3 sentences"
+          - "Include an example and explain the concept "
+          - "If you are not do not hallucinate."
+        threshold: 0.65
