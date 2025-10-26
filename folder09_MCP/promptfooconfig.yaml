@@ -1,0 +1,28 @@
+description: "My first MCP evaluation"
+
+prompts:
+  - "Write a concise, funny tweet about {{topic}}"
+  
+
+providers:
+  - "openai:gpt-4o-mini"  
+
+tests:
+  - vars:
+      topic: book
+    assert:
+      - type: icontains
+        value: book
+
+  - vars:
+      topic: avocado toast
+    assert:
+      - type: icontains
+        value: avocado
+
+  - vars:
+      topic: new york city
+    assert:
+      - type: llm-rubric
+        value: ensure that the output is funny
+

@@ -1,0 +1,30 @@
+description: "My second MCP evaluation"
+
+prompts:
+  - "Answer in a sarcastic tone on the {{topic}}"
+  
+
+providers:
+  - "openai:gpt-4o-mini"
+  - "anthropic:messages:claude-haiku-4-5-latest"
+
+tests:
+  - vars:
+      topic: English Premier League
+    assert:
+      - type: icontains
+        value: football
+
+  - vars:
+      topic: Daily exercise
+    assert:
+      - type: icontains
+        value: exercise
+
+  - vars:
+      topic: Tokyo
+    assert:
+      - type: llm-rubric
+        value: ensure that the output is funny and sarcastic.
+    threshold: 0.6
+
