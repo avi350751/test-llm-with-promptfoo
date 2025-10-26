@@ -1,0 +1,659 @@
+{
+  "evalId": "eval-YWt-2025-10-26T01:11:00",
+  "results": {
+    "version": 3,
+    "timestamp": "2025-10-26T01:11:00.710Z",
+    "prompts": [
+      {
+        "raw": "Answer in a sarcastic tone on the {{topic}}",
+        "label": "Answer in a sarcastic tone on the {{topic}}",
+        "id": "36f6dbb241f7248440496b456f1a412a25b44796b0d2943347552687f0444a3e",
+        "provider": "openai:gpt-4o-mini",
+        "metrics": {
+          "score": 2,
+          "testPassCount": 2,
+          "testFailCount": 1,
+          "testErrorCount": 0,
+          "assertPassCount": 2,
+          "assertFailCount": 1,
+          "totalLatencyMs": 28,
+          "tokenUsage": {
+            "prompt": 0,
+            "completion": 0,
+            "cached": 441,
+            "total": 441,
+            "numRequests": 3,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0
+            },
+            "assertions": {
+              "total": 450,
+              "prompt": 0,
+              "completion": 0,
+              "cached": 450,
+              "numRequests": 0,
+              "completionDetails": {
+                "reasoning": 0,
+                "acceptedPrediction": 0,
+                "rejectedPrediction": 0
+              }
+            }
+          },
+          "namedScores": {},
+          "namedScoresCount": {},
+          "cost": 0.00024165
+        }
+      },
+      {
+        "raw": "Answer in a sarcastic tone on the {{topic}}",
+        "label": "Answer in a sarcastic tone on the {{topic}}",
+        "id": "36f6dbb241f7248440496b456f1a412a25b44796b0d2943347552687f0444a3e",
+        "provider": "anthropic:claude-haiku-4-5-20251001",
+        "metrics": {
+          "score": 2,
+          "testPassCount": 2,
+          "testFailCount": 1,
+          "testErrorCount": 0,
+          "assertPassCount": 2,
+          "assertFailCount": 1,
+          "totalLatencyMs": 14834,
+          "tokenUsage": {
+            "prompt": 54,
+            "completion": 858,
+            "cached": 0,
+            "total": 912,
+            "numRequests": 3,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0
+            },
+            "assertions": {
+              "total": 506,
+              "prompt": 0,
+              "completion": 0,
+              "cached": 506,
+              "numRequests": 0,
+              "completionDetails": {
+                "reasoning": 0,
+                "acceptedPrediction": 0,
+                "rejectedPrediction": 0
+              }
+            }
+          },
+          "namedScores": {},
+          "namedScoresCount": {},
+          "cost": 0
+        }
+      }
+    ],
+    "results": [
+      {
+        "cost": 0.0000675,
+        "error": "Expected output to contain \"football\"",
+        "gradingResult": {
+          "pass": false,
+          "score": 0,
+          "reason": "Expected output to contain \"football\"",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "componentResults": [
+            {
+              "pass": false,
+              "score": 0,
+              "reason": "Expected output to contain \"football\"",
+              "assertion": {
+                "type": "icontains",
+                "value": "football"
+              }
+            }
+          ],
+          "assertion": null
+        },
+        "id": "d374b20e-2256-4cd2-b980-209688193de1",
+        "latencyMs": 8,
+        "namedScores": {},
+        "prompt": {
+          "raw": "Answer in a sarcastic tone on the English Premier League",
+          "label": "Answer in a sarcastic tone on the {{topic}}"
+        },
+        "promptId": "36f6dbb241f7248440496b456f1a412a25b44796b0d2943347552687f0444a3e",
+        "promptIdx": 0,
+        "provider": {
+          "id": "openai:gpt-4o-mini",
+          "label": ""
+        },
+        "response": {
+          "output": "Oh, the English Premier League? You mean the league where teams spend millions on players just to watch them dramatically flop on the pitch like they're auditioning for a soap opera? It’s like a never-ending circus, complete with clowns, dramatic injuries, and VAR decisions that make you question your life choices. And let’s not forget the fans—who could resist the charming sight of grown adults crying over a penalty miss? Truly the epitome of “the beautiful game.” Bravo, Premier League, bravo! What a masterpiece! 🙄",
+          "tokenUsage": {
+            "cached": 126,
+            "total": 126
+          },
+          "cached": true,
+          "finishReason": "stop",
+          "cost": 0.0000675
+        },
+        "score": 0,
+        "success": false,
+        "testCase": {
+          "vars": {
+            "topic": "English Premier League"
+          },
+          "assert": [
+            {
+              "type": "icontains",
+              "value": "football"
+            }
+          ],
+          "options": {},
+          "metadata": {}
+        },
+        "testIdx": 0,
+        "vars": {
+          "topic": "English Premier League"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 1
+      },
+      {
+        "cost": 0,
+        "error": "Expected output to contain \"football\"",
+        "gradingResult": {
+          "pass": false,
+          "score": 0,
+          "reason": "Expected output to contain \"football\"",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "componentResults": [
+            {
+              "pass": false,
+              "score": 0,
+              "reason": "Expected output to contain \"football\"",
+              "assertion": {
+                "type": "icontains",
+                "value": "football"
+              }
+            }
+          ],
+          "assertion": null
+        },
+        "id": "0935dac3-5073-4089-8da1-731bddee4e57",
+        "latencyMs": 5384,
+        "namedScores": {},
+        "prompt": {
+          "raw": "Answer in a sarcastic tone on the English Premier League",
+          "label": "Answer in a sarcastic tone on the {{topic}}"
+        },
+        "promptId": "36f6dbb241f7248440496b456f1a412a25b44796b0d2943347552687f0444a3e",
+        "promptIdx": 1,
+        "provider": {
+          "id": "anthropic:claude-haiku-4-5-20251001",
+          "label": ""
+        },
+        "response": {
+          "output": "# Oh, the English Premier League – What a Thrilling Institution!\n\nBecause nothing says \"competitive sport\" quite like watching the same three teams fight over the trophy every year while the rest of us peasants pretend we have a chance. How *delightful*.\n\nAnd let's talk about the **financial fair play** rules – you know, those adorable little guidelines that definitely prevent wealthy clubs from just buying their way to victory. Spoiler alert: they don't. But sure, let's keep pretending that Manchester City's 115 alleged breaches are just a big misunderstanding.\n\nThe **VAR system** is absolutely *chef's kiss* – nothing fans love more than waiting four minutes to see if a player's armpit was offside. Revolutionary stuff. Really gets the heart racing.\n\nOh, and the **ticket prices**! At only £50-150+ per match, it's so accessible to the working-class supporters who built these clubs. Who needs to feed their family when you can watch your team lose 3-0 to a newly promoted side?\n\nBut hey, at least we get **80+ matches per season** to watch the same teams play each other repeatedly. Variety is the spice of life, right?\n\n*Truly*, the Premier League is the pinnacle of sporting excellence. 🙄",
+          "tokenUsage": {
+            "total": 307,
+            "prompt": 19,
+            "completion": 288
+          },
+          "finishReason": "stop"
+        },
+        "score": 0,
+        "success": false,
+        "testCase": {
+          "vars": {
+            "topic": "English Premier League"
+          },
+          "assert": [
+            {
+              "type": "icontains",
+              "value": "football"
+            }
+          ],
+          "options": {},
+          "metadata": {}
+        },
+        "testIdx": 0,
+        "vars": {
+          "topic": "English Premier League"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 1
+      },
+      {
+        "cost": 0.00006675,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "icontains",
+                "value": "exercise"
+              }
+            }
+          ],
+          "assertion": null
+        },
+        "id": "dad970b0-457c-480b-af07-17dc3d8fe49d",
+        "latencyMs": 17,
+        "namedScores": {},
+        "prompt": {
+          "raw": "Answer in a sarcastic tone on the Daily exercise",
+          "label": "Answer in a sarcastic tone on the {{topic}}"
+        },
+        "promptId": "36f6dbb241f7248440496b456f1a412a25b44796b0d2943347552687f0444a3e",
+        "promptIdx": 0,
+        "provider": {
+          "id": "openai:gpt-4o-mini",
+          "label": ""
+        },
+        "response": {
+          "output": "Oh, absolutely! Daily exercise is just the most thrilling way to spend your precious time. Who wouldn't want to wake up at the crack of dawn to engage in some delightful torture, right? Sweating buckets, gasping for breath, and pretending you love every second of those squats. It's like a party for your muscles, and everyone's invited—except your social life! And let's not forget the joy of sore muscles that remind you for days that you made \"healthy choices.\" Truly, what’s not to love about it? ",
+          "tokenUsage": {
+            "cached": 124,
+            "total": 124
+          },
+          "cached": true,
+          "finishReason": "stop",
+          "cost": 0.00006675
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "topic": "Daily exercise"
+          },
+          "assert": [
+            {
+              "type": "icontains",
+              "value": "exercise"
+            }
+          ],
+          "options": {},
+          "metadata": {}
+        },
+        "testIdx": 1,
+        "vars": {
+          "topic": "Daily exercise"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "icontains",
+                "value": "exercise"
+              }
+            }
+          ],
+          "assertion": null
+        },
+        "id": "aa352300-f085-413e-a82a-0af1657f72e8",
+        "latencyMs": 4837,
+        "namedScores": {},
+        "prompt": {
+          "raw": "Answer in a sarcastic tone on the Daily exercise",
+          "label": "Answer in a sarcastic tone on the {{topic}}"
+        },
+        "promptId": "36f6dbb241f7248440496b456f1a412a25b44796b0d2943347552687f0444a3e",
+        "promptIdx": 1,
+        "provider": {
+          "id": "anthropic:claude-haiku-4-5-20251001",
+          "label": ""
+        },
+        "response": {
+          "output": "# Daily Exercise: A Sarcastic Ode\n\nOh, *wonderful*, another day to move this meat suit around! Because sitting is just *too* comfortable, right?\n\nLet me lace up these torture devices they call \"sneakers\" and head out into the elements. Nothing says \"fun\" like sweating through my clothes while my lungs file a formal complaint.\n\n**The Morning Jog Experience:**\nAh yes, let me voluntarily make myself exhausted and sore before 7 AM. Truly, this is the peak of human achievement. And look—there's a hill! How *delightful*. My legs are absolutely *thrilled* about this.\n\n**The Gym:**\nNothing beats paying money to suffer in a room full of mirrors so I can watch myself struggle in real-time. It's like therapy, except more painful and with more grunting.\n\n**The Motivation:**\n\"You'll feel so energized!\" they said. Sure, if \"energized\" means \"like I've been hit by a truck,\" then absolutely, I'm *living* my best life.\n\nBut hey, at least I can eat that extra cookie guilt-free... right? *Right?*\n\n---\n\n*Now if you'll excuse me, I need to ice everything and contemplate my life choices.*",
+          "tokenUsage": {
+            "total": 307,
+            "prompt": 18,
+            "completion": 289
+          },
+          "finishReason": "stop"
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "topic": "Daily exercise"
+          },
+          "assert": [
+            {
+              "type": "icontains",
+              "value": "exercise"
+            }
+          ],
+          "options": {},
+          "metadata": {}
+        },
+        "testIdx": 1,
+        "vars": {
+          "topic": "Daily exercise"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0.0001074,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "Aggregate score 1.00 ≥ 0.6 threshold",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 450,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 450,
+            "numRequests": 0
+          },
+          "componentResults": [
+            {
+              "assertion": {
+                "type": "llm-rubric",
+                "value": "ensure that the output is funny and sarcastic."
+              },
+              "pass": true,
+              "score": 1,
+              "reason": "The output uses exaggeration and irony to describe Tokyo in an obviously sarcastic manner, and the references to waiting in long lines for sushi, the abundance of fashion trends, and the description of Tokyo as a 'cozy little corner' are all delivered in a humorous, tongue-in-cheek way. Both funny and sarcastic tones are evident.",
+              "tokensUsed": {
+                "total": 450,
+                "prompt": 0,
+                "completion": 0,
+                "cached": 450,
+                "numRequests": 0,
+                "completionDetails": {
+                  "reasoning": 0,
+                  "acceptedPrediction": 0,
+                  "rejectedPrediction": 0
+                }
+              }
+            }
+          ],
+          "assertion": null
+        },
+        "id": "b7abac35-c1ed-4ab7-ba87-49b0db825b40",
+        "latencyMs": 3,
+        "namedScores": {},
+        "prompt": {
+          "raw": "Answer in a sarcastic tone on the Tokyo",
+          "label": "Answer in a sarcastic tone on the {{topic}}"
+        },
+        "promptId": "36f6dbb241f7248440496b456f1a412a25b44796b0d2943347552687f0444a3e",
+        "promptIdx": 0,
+        "provider": {
+          "id": "openai:gpt-4o-mini",
+          "label": ""
+        },
+        "response": {
+          "output": "Oh sure, Tokyo—just a little city with a modest population of around 14 million. You know, nothing special! It’s only the bustling capital of Japan, where you can find everything from ancient temples to the latest in robotic technology. I mean, who wouldn’t want to navigate the labyrinth of train stations that look like they’re straight out of a sci-fi movie? And of course, let's not forget the food—sushi, ramen, and more. Because, clearly, everyone wants to wait in line for hours just to eat a piece of perfectly sliced raw fish. Sounds like a dream, right? Don't even get me started on the shopping—like you could possibly need more than six foot-long lines of the latest fashion trends. Tokyo? Oh no, just a cozy little corner of the world where things are totally chill and definitely not overwhelming at all!",
+          "tokenUsage": {
+            "cached": 191,
+            "total": 191
+          },
+          "cached": true,
+          "finishReason": "stop",
+          "cost": 0.0001074
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "topic": "Tokyo"
+          },
+          "assert": [
+            {
+              "type": "llm-rubric",
+              "value": "ensure that the output is funny and sarcastic."
+            }
+          ],
+          "threshold": 0.6,
+          "options": {},
+          "metadata": {}
+        },
+        "testIdx": 2,
+        "vars": {
+          "topic": "Tokyo"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "Aggregate score 1.00 ≥ 0.6 threshold",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 506,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 506,
+            "numRequests": 0
+          },
+          "componentResults": [
+            {
+              "assertion": {
+                "type": "llm-rubric",
+                "value": "ensure that the output is funny and sarcastic."
+              },
+              "pass": true,
+              "score": 1,
+              "reason": "The output uses exaggerated descriptions, irony, and sarcasm to humorously depict Tokyo (e.g., calling Tokyo a 'quaint little village', complaining about the crowds, and referencing overpriced food and extreme weather sarcastically). The overall tone is consistently sarcastic and delivers humor effectively.",
+              "tokensUsed": {
+                "total": 506,
+                "prompt": 0,
+                "completion": 0,
+                "cached": 506,
+                "numRequests": 0,
+                "completionDetails": {
+                  "reasoning": 0,
+                  "acceptedPrediction": 0,
+                  "rejectedPrediction": 0
+                }
+              }
+            }
+          ],
+          "assertion": null
+        },
+        "id": "10113754-1d1b-4235-9c2f-f1ac4d33b73d",
+        "latencyMs": 4613,
+        "namedScores": {},
+        "prompt": {
+          "raw": "Answer in a sarcastic tone on the Tokyo",
+          "label": "Answer in a sarcastic tone on the {{topic}}"
+        },
+        "promptId": "36f6dbb241f7248440496b456f1a412a25b44796b0d2943347552687f0444a3e",
+        "promptIdx": 1,
+        "provider": {
+          "id": "anthropic:claude-haiku-4-5-20251001",
+          "label": ""
+        },
+        "response": {
+          "output": "# Oh, Tokyo! That Quaint Little Village\n\nOh, you want to hear about Tokyo? Sure, let me tell you about this *totally* laid-back, quiet place where absolutely nothing ever happens.\n\nIt's just a charming little metropolis of only 37 million people—no big deal. Nothing says \"relaxing vacation\" like navigating the world's busiest train station during rush hour while being gently compressed by salarymen like a human accordion.\n\nAnd the food? *Chef's kiss* – overpriced, tiny portions that'll leave you wondering if you actually ate or just looked at food for three hours. But hey, at least you can pay $300 for a bowl of ramen that tastes like it was blessed by a Michelin-star chef's distant cousin.\n\nThe weather is also *delightful*—either you're melting in 95-degree humidity that makes you question your life choices, or it's so cold your tears freeze before they hit your cheeks. No in-between!\n\nBut sure, Tokyo is definitely the place to go if you love crowds, neon signs, vending machines on every corner, and the constant feeling that you're somehow both completely lost and exactly where you need to be.\n\n*Truly magical.* 🙄",
+          "tokenUsage": {
+            "total": 298,
+            "prompt": 17,
+            "completion": 281
+          },
+          "finishReason": "stop"
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "topic": "Tokyo"
+          },
+          "assert": [
+            {
+              "type": "llm-rubric",
+              "value": "ensure that the output is funny and sarcastic."
+            }
+          ],
+          "threshold": 0.6,
+          "options": {},
+          "metadata": {}
+        },
+        "testIdx": 2,
+        "vars": {
+          "topic": "Tokyo"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      }
+    ],
+    "stats": {
+      "successes": 4,
+      "failures": 2,
+      "errors": 0,
+      "tokenUsage": {
+        "prompt": 54,
+        "completion": 858,
+        "cached": 441,
+        "total": 1353,
+        "numRequests": 6,
+        "completionDetails": {
+          "reasoning": 0,
+          "acceptedPrediction": 0,
+          "rejectedPrediction": 0
+        },
+        "assertions": {
+          "total": 956,
+          "prompt": 0,
+          "completion": 0,
+          "cached": 956,
+          "numRequests": 0,
+          "completionDetails": {
+            "reasoning": 0,
+            "acceptedPrediction": 0,
+            "rejectedPrediction": 0
+          }
+        }
+      }
+    }
+  },
+  "config": {
+    "tags": {},
+    "description": "My second MCP evaluation",
+    "prompts": [
+      "Answer in a sarcastic tone on the {{topic}}"
+    ],
+    "providers": [
+      "openai:gpt-4o-mini",
+      "anthropic:messages:claude-haiku-4-5-20251001"
+    ],
+    "tests": [
+      {
+        "vars": {
+          "topic": "English Premier League"
+        },
+        "assert": [
+          {
+            "type": "icontains",
+            "value": "football"
+          }
+        ]
+      },
+      {
+        "vars": {
+          "topic": "Daily exercise"
+        },
+        "assert": [
+          {
+            "type": "icontains",
+            "value": "exercise"
+          }
+        ]
+      },
+      {
+        "vars": {
+          "topic": "Tokyo"
+        },
+        "assert": [
+          {
+            "type": "llm-rubric",
+            "value": "ensure that the output is funny and sarcastic."
+          }
+        ],
+        "threshold": 0.6
+      }
+    ],
+    "scenarios": [],
+    "env": {},
+    "sharing": false,
+    "outputPath": [
+      "output/results.json",
+      "output/results.html"
+    ],
+    "extensions": [],
+    "metadata": {},
+    "evaluateOptions": {}
+  },
+  "shareableUrl": null,
+  "metadata": {
+    "promptfooVersion": "0.118.11",
+    "nodeVersion": "v24.9.0",
+    "platform": "darwin",
+    "arch": "arm64",
+    "exportedAt": "2025-10-26T01:11:06.147Z",
+    "evaluationCreatedAt": "2025-10-26T01:11:00.710Z"
+  }
+}

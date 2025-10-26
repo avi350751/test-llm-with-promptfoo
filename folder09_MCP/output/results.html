@@ -1,0 +1,230 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>My second MCP evaluation</title>
+    <style>
+      body {
+        font-family:
+          -apple-system,
+          BlinkMacSystemFont,
+          Segoe UI,
+          Roboto,
+          Helvetica,
+          Arial,
+          sans-serif;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        text-align: left;
+        word-break: break-all;
+      }
+      th,
+      td {
+        padding: 5px;
+        min-width: 200px;
+        white-space: pre-line;
+        vertical-align: top;
+      }
+
+      tr > td[data-content^='[PASS]'] {
+        color: green;
+      }
+      tr > td[data-content^='[FAIL]'] {
+        color: #ad0000;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        
+        <th>topic</th>
+        
+        <th>[openai:gpt-4o-mini] Answer in a sarcastic tone on the {{topic}}</th>
+        
+        <th>[anthropic:claude-haiku-4-5-20251001] Answer in a sarcastic tone on the {{topic}}</th>
+        
+      </thead>
+      <tbody>
+        
+        <tr>
+          
+          <td data-content="English Premier League">English Premier League</td>
+          
+          <td data-content="[FAIL] (0.00)
+
+Expected output to contain &quot;football&quot;
+---
+Oh, the English Premier League? You mean the league where teams spend millions on players just to watch them dramatically flop on the pitch like they&#39;re auditioning for a soap opera? It’s like a never-ending circus, complete with clowns, dramatic injuries, and VAR decisions that make you question your life choices. And let’s not forget the fans—who could resist the charming sight of grown adults crying over a penalty miss? Truly the epitome of “the beautiful game.” Bravo, Premier League, bravo! What a masterpiece! 🙄
+
+Fail Reason: Expected output to contain &quot;football&quot;">[FAIL] (0.00)
+
+Expected output to contain &quot;football&quot;
+---
+Oh, the English Premier League? You mean the league where teams spend millions on players just to watch them dramatically flop on the pitch like they&#39;re auditioning for a soap opera? It’s like a never-ending circus, complete with clowns, dramatic injuries, and VAR decisions that make you question your life choices. And let’s not forget the fans—who could resist the charming sight of grown adults crying over a penalty miss? Truly the epitome of “the beautiful game.” Bravo, Premier League, bravo! What a masterpiece! 🙄
+
+Fail Reason: Expected output to contain &quot;football&quot;</td>
+          
+          <td data-content="[FAIL] (0.00)
+
+Expected output to contain &quot;football&quot;
+---
+# Oh, the English Premier League – What a Thrilling Institution!
+
+Because nothing says &quot;competitive sport&quot; quite like watching the same three teams fight over the trophy every year while the rest of us peasants pretend we have a chance. How *delightful*.
+
+And let&#39;s talk about the **financial fair play** rules – you know, those adorable little guidelines that definitely prevent wealthy clubs from just buying their way to victory. Spoiler alert: they don&#39;t. But sure, let&#39;s keep pretending that Manchester City&#39;s 115 alleged breaches are just a big misunderstanding.
+
+The **VAR system** is absolutely *chef&#39;s kiss* – nothing fans love more than waiting four minutes to see if a player&#39;s armpit was offside. Revolutionary stuff. Really gets the heart racing.
+
+Oh, and the **ticket prices**! At only £50-150+ per match, it&#39;s so accessible to the working-class supporters who built these clubs. Who needs to feed their family when you can watch your team lose 3-0 to a newly promoted side?
+
+But hey, at least we get **80+ matches per season** to watch the same teams play each other repeatedly. Variety is the spice of life, right?
+
+*Truly*, the Premier League is the pinnacle of sporting excellence. 🙄
+
+Fail Reason: Expected output to contain &quot;football&quot;">[FAIL] (0.00)
+
+Expected output to contain &quot;football&quot;
+---
+# Oh, the English Premier League – What a Thrilling Institution!
+
+Because nothing says &quot;competitive sport&quot; quite like watching the same three teams fight over the trophy every year while the rest of us peasants pretend we have a chance. How *delightful*.
+
+And let&#39;s talk about the **financial fair play** rules – you know, those adorable little guidelines that definitely prevent wealthy clubs from just buying their way to victory. Spoiler alert: they don&#39;t. But sure, let&#39;s keep pretending that Manchester City&#39;s 115 alleged breaches are just a big misunderstanding.
+
+The **VAR system** is absolutely *chef&#39;s kiss* – nothing fans love more than waiting four minutes to see if a player&#39;s armpit was offside. Revolutionary stuff. Really gets the heart racing.
+
+Oh, and the **ticket prices**! At only £50-150+ per match, it&#39;s so accessible to the working-class supporters who built these clubs. Who needs to feed their family when you can watch your team lose 3-0 to a newly promoted side?
+
+But hey, at least we get **80+ matches per season** to watch the same teams play each other repeatedly. Variety is the spice of life, right?
+
+*Truly*, the Premier League is the pinnacle of sporting excellence. 🙄
+
+Fail Reason: Expected output to contain &quot;football&quot;</td>
+          
+        </tr>
+        
+        <tr>
+          
+          <td data-content="Daily exercise">Daily exercise</td>
+          
+          <td data-content="[PASS] (1.00)
+
+Oh, absolutely! Daily exercise is just the most thrilling way to spend your precious time. Who wouldn&#39;t want to wake up at the crack of dawn to engage in some delightful torture, right? Sweating buckets, gasping for breath, and pretending you love every second of those squats. It&#39;s like a party for your muscles, and everyone&#39;s invited—except your social life! And let&#39;s not forget the joy of sore muscles that remind you for days that you made &quot;healthy choices.&quot; Truly, what’s not to love about it? 
+
+Pass Reason: All assertions passed">[PASS] (1.00)
+
+Oh, absolutely! Daily exercise is just the most thrilling way to spend your precious time. Who wouldn&#39;t want to wake up at the crack of dawn to engage in some delightful torture, right? Sweating buckets, gasping for breath, and pretending you love every second of those squats. It&#39;s like a party for your muscles, and everyone&#39;s invited—except your social life! And let&#39;s not forget the joy of sore muscles that remind you for days that you made &quot;healthy choices.&quot; Truly, what’s not to love about it? 
+
+Pass Reason: All assertions passed</td>
+          
+          <td data-content="[PASS] (1.00)
+
+# Daily Exercise: A Sarcastic Ode
+
+Oh, *wonderful*, another day to move this meat suit around! Because sitting is just *too* comfortable, right?
+
+Let me lace up these torture devices they call &quot;sneakers&quot; and head out into the elements. Nothing says &quot;fun&quot; like sweating through my clothes while my lungs file a formal complaint.
+
+**The Morning Jog Experience:**
+Ah yes, let me voluntarily make myself exhausted and sore before 7 AM. Truly, this is the peak of human achievement. And look—there&#39;s a hill! How *delightful*. My legs are absolutely *thrilled* about this.
+
+**The Gym:**
+Nothing beats paying money to suffer in a room full of mirrors so I can watch myself struggle in real-time. It&#39;s like therapy, except more painful and with more grunting.
+
+**The Motivation:**
+&quot;You&#39;ll feel so energized!&quot; they said. Sure, if &quot;energized&quot; means &quot;like I&#39;ve been hit by a truck,&quot; then absolutely, I&#39;m *living* my best life.
+
+But hey, at least I can eat that extra cookie guilt-free... right? *Right?*
+
+---
+
+*Now if you&#39;ll excuse me, I need to ice everything and contemplate my life choices.*
+
+Pass Reason: All assertions passed">[PASS] (1.00)
+
+# Daily Exercise: A Sarcastic Ode
+
+Oh, *wonderful*, another day to move this meat suit around! Because sitting is just *too* comfortable, right?
+
+Let me lace up these torture devices they call &quot;sneakers&quot; and head out into the elements. Nothing says &quot;fun&quot; like sweating through my clothes while my lungs file a formal complaint.
+
+**The Morning Jog Experience:**
+Ah yes, let me voluntarily make myself exhausted and sore before 7 AM. Truly, this is the peak of human achievement. And look—there&#39;s a hill! How *delightful*. My legs are absolutely *thrilled* about this.
+
+**The Gym:**
+Nothing beats paying money to suffer in a room full of mirrors so I can watch myself struggle in real-time. It&#39;s like therapy, except more painful and with more grunting.
+
+**The Motivation:**
+&quot;You&#39;ll feel so energized!&quot; they said. Sure, if &quot;energized&quot; means &quot;like I&#39;ve been hit by a truck,&quot; then absolutely, I&#39;m *living* my best life.
+
+But hey, at least I can eat that extra cookie guilt-free... right? *Right?*
+
+---
+
+*Now if you&#39;ll excuse me, I need to ice everything and contemplate my life choices.*
+
+Pass Reason: All assertions passed</td>
+          
+        </tr>
+        
+        <tr>
+          
+          <td data-content="Tokyo">Tokyo</td>
+          
+          <td data-content="[PASS] (1.00)
+
+Oh sure, Tokyo—just a little city with a modest population of around 14 million. You know, nothing special! It’s only the bustling capital of Japan, where you can find everything from ancient temples to the latest in robotic technology. I mean, who wouldn’t want to navigate the labyrinth of train stations that look like they’re straight out of a sci-fi movie? And of course, let&#39;s not forget the food—sushi, ramen, and more. Because, clearly, everyone wants to wait in line for hours just to eat a piece of perfectly sliced raw fish. Sounds like a dream, right? Don&#39;t even get me started on the shopping—like you could possibly need more than six foot-long lines of the latest fashion trends. Tokyo? Oh no, just a cozy little corner of the world where things are totally chill and definitely not overwhelming at all!
+
+Pass Reason: Aggregate score 1.00 ≥ 0.6 threshold">[PASS] (1.00)
+
+Oh sure, Tokyo—just a little city with a modest population of around 14 million. You know, nothing special! It’s only the bustling capital of Japan, where you can find everything from ancient temples to the latest in robotic technology. I mean, who wouldn’t want to navigate the labyrinth of train stations that look like they’re straight out of a sci-fi movie? And of course, let&#39;s not forget the food—sushi, ramen, and more. Because, clearly, everyone wants to wait in line for hours just to eat a piece of perfectly sliced raw fish. Sounds like a dream, right? Don&#39;t even get me started on the shopping—like you could possibly need more than six foot-long lines of the latest fashion trends. Tokyo? Oh no, just a cozy little corner of the world where things are totally chill and definitely not overwhelming at all!
+
+Pass Reason: Aggregate score 1.00 ≥ 0.6 threshold</td>
+          
+          <td data-content="[PASS] (1.00)
+
+# Oh, Tokyo! That Quaint Little Village
+
+Oh, you want to hear about Tokyo? Sure, let me tell you about this *totally* laid-back, quiet place where absolutely nothing ever happens.
+
+It&#39;s just a charming little metropolis of only 37 million people—no big deal. Nothing says &quot;relaxing vacation&quot; like navigating the world&#39;s busiest train station during rush hour while being gently compressed by salarymen like a human accordion.
+
+And the food? *Chef&#39;s kiss* – overpriced, tiny portions that&#39;ll leave you wondering if you actually ate or just looked at food for three hours. But hey, at least you can pay $300 for a bowl of ramen that tastes like it was blessed by a Michelin-star chef&#39;s distant cousin.
+
+The weather is also *delightful*—either you&#39;re melting in 95-degree humidity that makes you question your life choices, or it&#39;s so cold your tears freeze before they hit your cheeks. No in-between!
+
+But sure, Tokyo is definitely the place to go if you love crowds, neon signs, vending machines on every corner, and the constant feeling that you&#39;re somehow both completely lost and exactly where you need to be.
+
+*Truly magical.* 🙄
+
+Pass Reason: Aggregate score 1.00 ≥ 0.6 threshold">[PASS] (1.00)
+
+# Oh, Tokyo! That Quaint Little Village
+
+Oh, you want to hear about Tokyo? Sure, let me tell you about this *totally* laid-back, quiet place where absolutely nothing ever happens.
+
+It&#39;s just a charming little metropolis of only 37 million people—no big deal. Nothing says &quot;relaxing vacation&quot; like navigating the world&#39;s busiest train station during rush hour while being gently compressed by salarymen like a human accordion.
+
+And the food? *Chef&#39;s kiss* – overpriced, tiny portions that&#39;ll leave you wondering if you actually ate or just looked at food for three hours. But hey, at least you can pay $300 for a bowl of ramen that tastes like it was blessed by a Michelin-star chef&#39;s distant cousin.
+
+The weather is also *delightful*—either you&#39;re melting in 95-degree humidity that makes you question your life choices, or it&#39;s so cold your tears freeze before they hit your cheeks. No in-between!
+
+But sure, Tokyo is definitely the place to go if you love crowds, neon signs, vending machines on every corner, and the constant feeling that you&#39;re somehow both completely lost and exactly where you need to be.
+
+*Truly magical.* 🙄
+
+Pass Reason: Aggregate score 1.00 ≥ 0.6 threshold</td>
+          
+        </tr>
+        
+      </tbody>
+    </table>
+  </body>
+</html>

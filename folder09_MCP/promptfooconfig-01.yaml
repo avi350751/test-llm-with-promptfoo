@@ -6,7 +6,7 @@ prompts:
 
 providers:
   - "openai:gpt-4o-mini"
-  - "anthropic:messages:claude-haiku-4-5-latest"
+  - "anthropic:messages:claude-haiku-4-5-20251001"
 
 tests:
   - vars:
