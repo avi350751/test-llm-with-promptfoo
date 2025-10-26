@@ -13,7 +13,7 @@ tests:
       topic: English Premier League
     assert:
       - type: icontains
-        value: football
+        value: players
 
   - vars:
       topic: Daily exercise
