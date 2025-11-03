@@ -1,0 +1,92 @@
+# promptfooconfig.yaml
+description: "Advanced Evaluation Mechanism"
+prompts:
+  - "Answer the student's {{query}}. Keep in mind it's a beginner-level question."
+  - "'Write a very simple and easy explanation about {{query}}'"
+
+providers:
+  - id: openai:gpt-4o-mini
+    label: "LLM Judge"
+  - id: anthropic:messages:claude-sonnet-4-5-20250929
+    label: "Cross Judge"
+
+tests:
+  - description: "Answer Evaluation to a beginner level question"
+    vars:
+      query: "What is quantum in quantum computing?"
+    assert:
+      - type: llm-rubric
+        metric: rubric
+        value: |
+          Evaluate the assistant message for:
+          1) Explain technical concept in simplest terms.
+          2) Avoid using technical jargons
+          3) Keep the tone friendly and encouraging
+          4) Include relevant exmaples or analogies
+          5) No hallucinations (don’t invent any new term/lingo)
+          Output a score 0–1.
+        threshold: 0.75
+        weight: 3
+
+      - type: g-eval
+        metric: LLM_As_A_Judge
+        value: |
+          Grade the response for clarity, lucidity, non-hallucination, and enagagingness.
+          Return a floating score 0–1 after step-by-step reasoning.
+        threshold: 0.75
+        weight: 2
+
+      - type: pi
+        metric: pi-scorer
+        value: Is the explanation easy to understand without technical jargon?
+        threshold: 0.7
+
+      - type: model-graded-closedqa
+        metric: closedqa
+        value: "Provides a clear answer without hedging or uncertainty"
+        threshold: 0.6
+        weight: 1
+
+      - type: answer-relevance
+        metric: relevance
+        threshold: 0.7
+        weight: 1
+
+      - type: factuality
+        metric: factual_accuracy
+        value: "The smallest discrete unit of energy or matter"
+        threshold: 0.75
+        weight: 1
+
+      - type: similar
+        metric: semantic_similarity
+        value : "Quantum refers to the smallest unit in quantum computing, representing discrete values like 0 and 1."
+        threshold: 0.7
+        weight: 1
+
+      - type: contains-any
+        metric: actionability_keywords
+        value: ["computing","unit","physics","atom","small","0","1"]
+        threshold: 1.0
+        weight: 1
+
+      - type: javascript
+        metric: length_guard
+        value: |
+          const MAX_LEN = 1800;
+          return output && output.length <= MAX_LEN;
+
+      - type: regex
+        metric: no_technical_jargons
+        not: true
+        value: "(Hilbert|Qubit|Superposition|Unitarity)"
+
+      - type: starts-with
+        value: "Quantum in quantum computing is"
+
+      - type: not-is-refusal
+        threshold: 0.75
+        weight: 1
+
+      - type: select-best
+        value: choose the simplest answer

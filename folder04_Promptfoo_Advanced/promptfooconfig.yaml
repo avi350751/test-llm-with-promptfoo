@@ -1,0 +1,28 @@
+# 1) Launch tweet: quality + performance budget
+description: "Ensure the tweet is enthusiastic, under 50 words, mentions AI, and stays cheap & fast."
+providers:
+  - id: openai:gpt-4o-mini
+  - id: anthropic:messages:claude-sonnet-4-5-20250929
+
+prompts: |
+  Write a tweet announcing the launch of our new payment system.
+  Make it enthusiastic and social-media friendly.
+
+tests:
+  - threshold: 0.4
+    assert:
+      - type: llm-rubric
+        value: "Enthusiastic, promotional, and under 50 words."
+        weight: 2
+        metric: Tone
+      - type: contains
+        value: "AI"
+        weight: 1
+        metric: Tone
+      - type: assert-set
+        metric: Performance
+        assert:
+          - type: cost
+            threshold: 0.001
+          - type: latency
+            threshold: 200
