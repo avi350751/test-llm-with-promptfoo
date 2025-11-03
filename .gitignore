@@ -4,6 +4,7 @@
 
 folder01_Deterministic
 *.folder02_Model_Graded
-folder04_Promptfoo_Advanced
+#folder04_Promptfoo_Advanced
 logs
 folder10_Real_UseCases
+folder11_LLM_As_Judge
